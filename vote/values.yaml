@@ -1,0 +1,26 @@
+replicaCount: 1
+
+image:
+  repository: myvotingacr.azurecr.io/vote
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+
+serviceAccount:
+  create: false
+  name: ""
+
+ingress:
+  enabled: false
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: []
+
